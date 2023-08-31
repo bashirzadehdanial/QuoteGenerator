@@ -10,8 +10,24 @@ let apiQuotes= []
 // Show New Quote
 function newQuote() {
     //Pick a random quote from apiQuotes array
-    const quote = apiQuotes[Math.floor(Math.random()* apiQuotes.length)]
-    console.log(quote);
+    const quote = apiQuotes[Math.floor(Math.random()* apiQuotes.length)];
+    //check if Author field is blank and replace it with 'unknown'
+    if (!quote.author){
+        authorText.textContent = 'unknown'
+    }else{
+        authorText.textContent = quote.author;
+    }
+
+    //check Quote length to determine styling
+    if (quote.text.length > 120){
+        quoteText.classList.add('long-quote');
+    }else{
+        quoteText.classList.remove('long-quote');
+    }
+
+
+    authorText.textContent = quote.author;
+    quoteText.textContent = quote.text;
 }
 //Get quotes from API
 async function getQuotes(){
