@@ -42,4 +42,15 @@ async function getQuotes(){
     }
 }
 
+//Tweet Quote 
+function tweetQuote(){
+    const tweetterUrl = `https://twitter.com/intent/tweet?text = ${quoteText.textContent} - ${authorText.text}`
+    window.open(twitterUrl, '_blank')
+}
+
+//Event Listeners
+newQuoteBtn.addEventListener('click', newQuote);
+tweetterBtn.addEventListener('click', tweetQuote);
+
+
 getQuotes()
