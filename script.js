@@ -50,7 +50,7 @@ function tweetQuote(){
 
 //Event Listeners
 newQuoteBtn.addEventListener('click', newQuote);
-tweetterBtn.addEventListener('click', tweetQuote);
+twitterBtn.addEventListener('click', tweetQuote);
 
 
 getQuotes()
