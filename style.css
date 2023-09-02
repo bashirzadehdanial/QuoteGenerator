@@ -41,6 +41,14 @@ body {
     font-size: 4rem;
 }
 
+.fab{
+    display: inline-block; 
+    width: 24px;
+    height: 24px;
+    background-image: url('https://png.pngtree.com/png-clipart/20190613/original/pngtree-twitter-icon-png-image_3584909.jpg');
+    background-size: cover;
+}
+
 .quote-author {
     margin: 15px;
     font-size: 2rem;
